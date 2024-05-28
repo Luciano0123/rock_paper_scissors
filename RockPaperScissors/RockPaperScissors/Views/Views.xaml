@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RockPaperScissors.Views.Views"
+             Title="Views">
+    <VerticalStackLayout>
+        <Label 
+            Text="Rock Paper Scissor"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Entry
+            x:Name="inputName"
+            Placeholder="Name"
+            WidthRequest="350"
+            />
+        
+        <Label
+            x:Name="WinsPlayer"
+            Text=""
+            FontSize="50"
+            HorizontalTextAlignment="Center"
+            />
+
+        <Label
+            x:Name="choicePlayer"
+            Text=" "
+            />
+        
+        <Label
+            x:Name="choiceEnemy"
+            Text=" "
+            />
+        
+        <Picker x:Name="pickerRockPaperScissor"
+                Title="Make your choice"
+                Margin="0, 0, 0, 14"
+                FontSize="15"
+                BackgroundColor="Aqua"
+                WidthRequest="225"
+                
+                >
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Rock</x:String>
+                    <x:String>Paper</x:String>
+                    <x:String>Scissor</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button
+                x:Name="PlayBtn"
+                Text="Play Jo Ken Pô" 
+                WidthRequest="125"
+                BackgroundColor="Black"/>
+    </VerticalStackLayout>
+</ContentPage>
